@@ -1,5 +1,5 @@
 import Item from "../item/Item";
-import { useState } from "React";
+import { useState } from "react";
 
 const items = [
     { id: "1", name: "Rayuela", price: "800" },
