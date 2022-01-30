@@ -1,11 +1,15 @@
-const Item = ( { name, price, id, setSelectedItem } ) => {
+import ItemCounter from "../item-counter/itemCounter"
+
+const Item = ({ name, price, id, setSelectedItem }) => {
+    const selectItem = () => setSelectedItem({ name, price, id });
 
 return (
     <div>
         <h2>Nombre del Producto: {name}</h2>
         <h2>Precio del Producto: {price}</h2>
-        <button onClick={() => setSelectedItem (id)}>Seleccionar producto</button>
+        <button onClick={selectItem}>Seleccionar producto</button>
         <hr />
+        <ItemCounter stock={10} />
     </div>
   );
 };
